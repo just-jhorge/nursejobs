@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>some other content</div>
+      <div>get hired banner</div>
     </>
   );
 }
