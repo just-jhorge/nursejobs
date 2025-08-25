@@ -78,7 +78,7 @@ const topics = [
 
 export default function BlogTopics() {
   return (
-    <section className="w-full py-12 md:py-16 bg-background">
+    <section className="w-full py-12 md:py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 md:px-0">
         <div className="leading-tight mb-5">
           <h2 className="text-lg md:text-3xl font-bold">

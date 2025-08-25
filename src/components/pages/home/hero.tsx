@@ -6,7 +6,7 @@ import nurseBanner from "@/public/images/nurse_banner.jpg";
 import { Verified } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function Introduction() {
+export default function Hero() {
   return (
     <header className="relative py-14 sm:py-16 h-[65dvh] md:h-[85dvh]">
       {/* background image */}
@@ -24,8 +24,10 @@ export default function Introduction() {
       <div className="relative z-10 max-w-6xl px-4 md:px-0 mx-auto h-full text-white">
         <div className="max-w-3xl h-full flex flex-col text-center md:text-left items-center md:items-start justify-center">
           <div className="flex items-center gap-2 mb-2">
-            <Verified className="size-5 text-green-500" />
-            <p className="font-medium">Verified by NMC, Ghana</p>
+            <Verified className="size-5 text-[#FFD700]" />
+            <p className="font-medium text-xs md:text-base">
+              Approved by Nursing and Midwifery Council, Ghana
+            </p>
           </div>
           <h1 className="text-3xl md:text-6xl mb-2 md:mb-4 font-black">
             Find Your Next Healthcare Opportunity

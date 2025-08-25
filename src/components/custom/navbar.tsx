@@ -10,6 +10,7 @@ import {
 import { Button } from "../ui/button";
 import { Menu, User2 } from "lucide-react";
 import NavbarClient from "./navbar-client";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -24,6 +25,9 @@ export default function Navbar() {
               <li>Employees</li>
               <li>Mentorship</li>
               <li>My Account</li>
+              <li>
+                <Link href="/#pricing">Pricing</Link>
+              </li>
               <li>More</li>
             </ul>
           </div>

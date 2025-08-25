@@ -55,14 +55,14 @@ export default function Testimonials() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-5">
           {testimonials.map((testimonial, idx) => (
-            <div key={idx} className="border rounded-lg p-4">
+            <div key={idx} className="border rounded-lg p-6 shadow-xs">
               <div className="flex items-center gap-2 mb-5">
                 <div className="size-11 relative rounded-md bg-gray-200"></div>
                 <div>
                   <h4 className="font-medium text-sm md:text-base">
                     {testimonial.name}
                   </h4>
-                  <p className="text-primary text-xs md:text-sm truncate">
+                  <p className="text-primary font-medium text-xs md:text-sm truncate">
                     {`${testimonial.role}, ${testimonial.company}`}
                   </p>
                 </div>

@@ -1,31 +1,55 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useRef } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import JobCard from "@/components/custom/job-card";
+import { Button } from "@/components/ui/button";
 
 export default function FeaturedJobs() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  function scrollLeft() {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: -250, behavior: "smooth" });
+    }
+  }
+
+  function scrollRight() {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: 250, behavior: "smooth" });
+    }
+  }
+
   return (
     <section className="w-full py-12 md:py-16 bg-background">
       <div className="max-w-6xl mx-auto px-4 md:px-0">
-        <div className="leading-tight mb-5">
-          <h2 className="text-lg md:text-3xl font-bold">Featured Jobs</h2>
-          <p className="text-sm md:text-lg text-muted-foreground">
-            Discover &amp; apply to some featured jobs
-          </p>
+        <div className="flex items-center justify-between mb-5">
+          <h2 className="text-lg md:text-2xl font-bold">Featured Jobs</h2>
+          <Link
+            href="/jobs"
+            className="flex items-center gap-1 text-sm md:text-base font-medium text-primary"
+          >
+            See all Jobs <ArrowRight />
+          </Link>
         </div>
-        <div className="overflow-x-auto pb-5 scrollbar-hide">
-          <div className="flex gap-4 w-max">
+        <div className="space-y-5">
+          <div
+            ref={containerRef}
+            className="overflow-x-auto snap-x snap-mandatory flex space-x-3 scrollbar-hide"
+          >
             {[...new Array(10)].map((_, idx) => (
               <JobCard key={idx} />
             ))}
           </div>
-        </div>
-        <div className="flex justify-end">
-          <Button size="lg">
-            See all jobs
-            <ArrowRight className="size-4" />
-          </Button>
+          <div className="hidden md:block w-full text-end space-x-2">
+            <Button size="icon" variant="outline" onClick={scrollLeft}>
+              <ChevronLeft />
+            </Button>
+            <Button size="icon" variant="outline" onClick={scrollRight}>
+              <ChevronRight />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

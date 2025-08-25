@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../styles/globals.css";
+import { Roboto } from "next/font/google";
 import Navbar from "@/components/custom/navbar";
 import Footer from "@/components/custom/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import "../styles/globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
 });
 
@@ -26,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${roboto.variable} antialiased`}>
         <Navbar />
         <main className="min-h-[calc(100dvh-4rem)]">{children}</main>
         <Footer />

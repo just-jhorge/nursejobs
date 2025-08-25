@@ -84,12 +84,12 @@ export default function HowItWorks() {
 
                 return (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="size-10 bg-green-950 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="size-10 bg-neutral-950 text-white rounded-full flex items-center justify-center font-bold">
                       {step.step}
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <Icon className="size-5 text-green-950" />
+                        <Icon className="size-5 text-neutral-950" />
                         <h4 className="text-base md:text-lg font-semibold text-foreground">
                           {step.title}
                         </h4>
@@ -102,12 +102,6 @@ export default function HowItWorks() {
                 );
               })}
             </div>
-            <Button
-              size="lg"
-              className="w-full bg-green-950 hover:bg-green-950/90 transition-colors"
-            >
-              Join now
-            </Button>
           </div>
           <div>
             <div className="flex items-center gap-5 mb-5">
@@ -122,12 +116,12 @@ export default function HowItWorks() {
 
                 return (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="size-10 bg-pink-900 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="size-10 bg-neutral-900 text-white rounded-full flex items-center justify-center font-bold">
                       {step.step}
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <Icon className="size-5 text-pink-900" />
+                        <Icon className="size-5 text-neutral-900" />
                         <h4 className="text-base md:text-lg font-semibold text-foreground">
                           {step.title}
                         </h4>
@@ -140,12 +134,6 @@ export default function HowItWorks() {
                 );
               })}
             </div>
-            <Button
-              size="lg"
-              className="w-full bg-pink-900 hover:bg-pink-900/90 transition-colors"
-            >
-              Post a Job
-            </Button>
           </div>
         </div>
       </div>
