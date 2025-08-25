@@ -12,7 +12,7 @@ export default function PricingCard({ plan }: { plan: Plan }) {
     <div
       className={`relative border ${
         plan.popular ? "border-[#FFD700] border-2" : "border-border"
-      } space-y-4 rounded-lg p-6 shadow-xs bg-card`}
+      } space-y-4 rounded-lg p-6 shadow-xs bg-card hover:shadow-md transition-shadow duration-300`}
     >
       {plan.popular && (
         <div className="absolute -top-5 right-3 px-2 rounded-tl-sm rounded-tr-sm font-medium bg-[#FFD700] text-sm">
@@ -26,7 +26,8 @@ export default function PricingCard({ plan }: { plan: Plan }) {
         <div>
           {plan.price > 0 ? (
             <h2 className="text-4xl font-bold mb-2">
-              GHS{plan.price}
+              <span className="text-2xl">GHS</span>
+              {plan.price}
               <span className="text-muted-foreground text-base font-medium ml-1">
                 / month
               </span>
@@ -58,7 +59,9 @@ export default function PricingCard({ plan }: { plan: Plan }) {
         <Button
           size="lg"
           className={`w-full ${
-            plan.popular ? "bg-[#FFD700] text-black" : "bg-blue-800"
+            plan.popular
+              ? "bg-[#FFD700] hover:bg-[#ecca05] text-black"
+              : "bg-blue-800"
           }`}
         >
           Choose plan

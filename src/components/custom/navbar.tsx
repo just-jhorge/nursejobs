@@ -18,10 +18,12 @@ export default function Navbar() {
       <div className="flex h-full items-center justify-center">
         <div className="max-w-6xl px-4 lg:px-0 flex w-full items-center justify-between">
           <MobileNavSheet />
-          <div>NurseJobs</div>
+          <Link href="/">NurseJobs</Link>
           <div className="hidden sm:block">
             <ul className="flex items-center gap-3 md:gap-6">
-              <li>Jobs</li>
+              <li>
+                <Link href="/jobs">Jobs</Link>
+              </li>
               <li>Employees</li>
               <li>Mentorship</li>
               <li>My Account</li>

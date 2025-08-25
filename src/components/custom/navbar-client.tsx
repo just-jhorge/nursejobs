@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import * as React from "react";
 
 export default function NavbarClient({
@@ -7,6 +8,7 @@ export default function NavbarClient({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = React.useState(false);
 
   React.useEffect(() => {
@@ -18,9 +20,11 @@ export default function NavbarClient({
   return (
     <nav
       className={`fixed top-0 z-50 w-full h-14 sm:h-16 transition-colors duration-300 ${
-        scrolled
-          ? "bg-background shadow text-foreground"
-          : "bg-transparent text-white"
+        pathname === "/"
+          ? scrolled
+            ? "bg-background shadow text-foreground"
+            : "bg-transparent text-white"
+          : "bg-background shadow text-foreground"
       }`}
     >
       {children}

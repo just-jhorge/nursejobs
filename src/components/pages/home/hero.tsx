@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import nurseBanner from "@/public/images/nurse_banner.jpg";
 import { Verified } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import nurseBanner from "@/public/images/nurse_banner.jpg";
 
 export default function Hero() {
   return (
@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl px-4 md:px-0 mx-auto h-full text-white">
         <div className="max-w-3xl h-full flex flex-col text-center md:text-left items-center md:items-start justify-center">
           <div className="flex items-center gap-2 mb-2">
-            <Verified className="size-5 text-[#FFD700]" />
+            <Verified className="size-6 text-black fill-[#FFD700]" />
             <p className="font-medium text-xs md:text-base">
               Approved by Nursing and Midwifery Council, Ghana
             </p>
