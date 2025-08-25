@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <header className="relative py-14 sm:py-16 h-[65dvh] md:h-[85dvh]">
+    <header className="relative py-14 sm:py-16 h-[65svh] md:h-[85svh]">
       {/* background image */}
       <div className="absolute inset-0">
         <Image
