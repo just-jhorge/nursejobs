@@ -1,51 +1,29 @@
-import { Button } from "@/components/ui/button";
-import nurseBanner from "@/public/images/nurse_banner.jpg";
-import Image from "next/image";
+import {
+  HowItWorks,
+  Mentorship,
+  Introduction,
+  FeaturedJobs,
+  WhyNurseJobs,
+} from "@/components/pages/home";
 
 export default function Home() {
   return (
     <>
-      <div className="relative py-14 sm:py-16 h-[75dvh]">
-        {/* background image */}
-        <div className="absolute inset-0">
-          <Image
-            src={nurseBanner}
-            alt="smiling_nurse"
-            className="h-full w-full object-cover object-top"
-          />
-          {/* overlay for better readability */}
-          <div className="absolute inset-0 bg-black/30" />
-        </div>
+      <Introduction />
+      <FeaturedJobs />
+      <HowItWorks />
+      <Mentorship />
+      <WhyNurseJobs />
 
-        {/* text content */}
-        <div className="relative z-10 max-w-6xl px-4 md:px-0 mx-auto h-full text-white">
-          <div className="max-w-3xl h-full flex flex-col text-center md:text-left items-center md:items-start justify-center">
-            <h1 className="text-3xl md:text-6xl mb-2 md:mb-4 font-black">
-              Find Your Next Healthcare Opportunity
-            </h1>
-            <p className="text-lg md:text-2xl mb-6">
-              Connecting nurses, midwives, and healthcare workers with jobs,
-              mentorship and growth.
-            </p>
-            <div className="space-x-3">
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium"
-              >
-                Find Jobs
-              </Button>
-              <Button
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-medium"
-                variant="outline"
-              >
-                Post a Job
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>get hired banner</div>
+      {/* Testimonials */}
+      <section className="w-full py-12 md:py-16 bg-blue-500">
+        Testimonials
+      </section>
+
+      {/* Latest articles */}
+      <section className="w-full py-12 md:py-16 bg-yellow-500">
+        Latest articles
+      </section>
     </>
   );
 }

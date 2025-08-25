@@ -1,5 +1,3 @@
-import { Menu, User2 } from "lucide-react";
-import { Button } from "../ui/button";
 import {
   Sheet,
   SheetClose,
@@ -9,6 +7,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "../ui/sheet";
+import { Button } from "../ui/button";
+import { Menu, User2 } from "lucide-react";
 import NavbarClient from "./navbar-client";
 
 export default function Navbar() {
@@ -31,7 +31,7 @@ export default function Navbar() {
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full text-primary"
+              className="rounded-full text-foreground"
             >
               Get Hired
             </Button>
@@ -49,7 +49,7 @@ function MobileNavSheet() {
       <Sheet>
         <SheetTrigger asChild>
           <Button size="icon" variant="outline">
-            <Menu className="size-5 text-primary" />
+            <Menu className="size-5 text-foreground" />
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="w-full">
@@ -76,7 +76,7 @@ function MobileAccountSheet() {
       <Sheet>
         <SheetTrigger asChild>
           <Button size="icon" variant="outline">
-            <User2 className="size-5 text-primary" />
+            <User2 className="size-5 text-foreground" />
           </Button>
         </SheetTrigger>
         <SheetContent side="right" className="w-full">
