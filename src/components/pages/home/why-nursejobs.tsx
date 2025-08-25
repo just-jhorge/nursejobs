@@ -2,7 +2,7 @@
 
 export default function WhyNurseJobs() {
   return (
-    <section className="w-full py-12 md:py-16 bg-background">
+    <section className="w-full py-12 md:py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 md:px-0">
         <h2 className="text-xl md:text-3xl text-center font-bold mb-5">
           Why NurseJobs.com

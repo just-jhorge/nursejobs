@@ -1,9 +1,12 @@
 import {
   HowItWorks,
   Mentorship,
+  BlogTopics,
   Introduction,
   FeaturedJobs,
   WhyNurseJobs,
+  Testimonials,
+  LatestArticles,
 } from "@/components/pages/home";
 
 export default function Home() {
@@ -14,16 +17,9 @@ export default function Home() {
       <HowItWorks />
       <Mentorship />
       <WhyNurseJobs />
-
-      {/* Testimonials */}
-      <section className="w-full py-12 md:py-16 bg-blue-500">
-        Testimonials
-      </section>
-
-      {/* Latest articles */}
-      <section className="w-full py-12 md:py-16 bg-yellow-500">
-        Latest articles
-      </section>
+      <Testimonials />
+      <LatestArticles />
+      <BlogTopics />
     </>
   );
 }
