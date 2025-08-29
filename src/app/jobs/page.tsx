@@ -1,4 +1,5 @@
-import { Banner, Jobs } from "@/components/pages/jobs";
+import Jobs from "./jobs";
+import Banner from "./banner";
 
 export default function Page() {
   return (

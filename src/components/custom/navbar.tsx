@@ -8,7 +8,7 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 import { Button } from "../ui/button";
-import { Menu, User2 } from "lucide-react";
+import { Menu, User, User2 } from "lucide-react";
 import NavbarClient from "./navbar-client";
 import Link from "next/link";
 
@@ -24,22 +24,30 @@ export default function Navbar() {
               <li>
                 <Link href="/jobs">Jobs</Link>
               </li>
-              <li>Employees</li>
+              <li>
+                <Link href="/recruiters">Recruiters</Link>
+              </li>
               <li>Mentorship</li>
-              <li>My Account</li>
               <li>
                 <Link href="/#pricing">Pricing</Link>
               </li>
               <li>More</li>
             </ul>
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden sm:flex items-center gap-2">
             <Button
               size="lg"
               variant="outline"
               className="rounded-full text-foreground"
             >
               Get Hired
+            </Button>
+            <Button
+              size="icon"
+              variant="outline"
+              className="rounded-full text-foreground"
+            >
+              <User />
             </Button>
           </div>
           <MobileAccountSheet />

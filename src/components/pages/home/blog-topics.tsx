@@ -111,7 +111,7 @@ export default function BlogTopics() {
           {topics.map((topic, idx) => (
             <div
               key={idx}
-              className="border w-full h-40 md:h-44 flex flex-col justify-between rounded-md space-y-3 p-3 md:p-6"
+              className="border w-full h-40 md:h-44 flex flex-col justify-between bg-card shadow-sm rounded-md space-y-3 p-3 md:p-6"
             >
               <div>
                 <h3 className="font-semibold mb-2 text-sm md:text-base line-clamp-1">
