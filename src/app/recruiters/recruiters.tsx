@@ -17,14 +17,16 @@ export default function Recruiters() {
   return (
     <div className="pt-[72px] sm:pt-[80px] pb-4 bg-background">
       <div className="max-w-6xl mx-auto px-4 md:px-0">
-        <div className="mb-8">
-          <h3 className="font-bold text-lg md:text-xl">
-            Nursing and Healthcare Recruiters
-          </h3>
-          <p className="text-muted-foreground text-sm md:text-base">
-            A directory of available healthcare recruiters. Choose your next
-            employer.
-          </p>
+        <div className="mb-8 flex flex-col md:flex-row items-center justify-between">
+          <div>
+            <h3 className="font-bold text-lg">
+              Nursing and Healthcare Recruiters
+            </h3>
+            <p className="text-muted-foreground text-sm">
+              A directory of available healthcare recruiters. Choose your next
+              employer.
+            </p>
+          </div>
           <RecruiterSearchInput />
         </div>
         <div>
@@ -90,14 +92,14 @@ export default function Recruiters() {
                       href={`/recruiters/alpha-clinic/jobs`}
                       className="text-primary font-medium"
                     >
-                      Vinci Hair Clinic
+                      Komfo Anokye Teaching Hospital
                     </Link>
                   </TableCell>
                   <TableCell className="text-muted-foreground">
-                    Private Healthcare
+                    Public Healthcare
                   </TableCell>
                   <TableCell className="text-right text-muted-foreground">
-                    Jobs <span className="font-normal">14</span>
+                    Jobs <span className="font-semibold text-black">14</span>
                   </TableCell>
                 </TableRow>
               ))}
