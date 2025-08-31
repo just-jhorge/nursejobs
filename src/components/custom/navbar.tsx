@@ -11,6 +11,7 @@ import { Button } from "../ui/button";
 import { Menu, User, User2 } from "lucide-react";
 import NavbarClient from "./navbar-client";
 import Link from "next/link";
+import NavbarLinks from "./navbar-links";
 
 export default function Navbar() {
   return (
@@ -20,27 +21,16 @@ export default function Navbar() {
           <MobileNavSheet />
           <Link href="/">NurseJobs</Link>
           <div className="hidden sm:block">
-            <ul className="flex items-center gap-3 md:gap-6">
-              <li>
-                <Link href="/jobs">Jobs</Link>
-              </li>
-              <li>
-                <Link href="/recruiters">Recruiters</Link>
-              </li>
-              <li>Mentorship</li>
-              <li>
-                <Link href="/#pricing">Pricing</Link>
-              </li>
-              <li>More</li>
-            </ul>
+            <NavbarLinks />
           </div>
           <div className="hidden sm:flex items-center gap-2">
             <Button
+              asChild
               size="lg"
               variant="outline"
               className="rounded-full text-foreground"
             >
-              Get Hired
+              <Link href="/signin">Get Hired</Link>
             </Button>
             <Button
               size="icon"

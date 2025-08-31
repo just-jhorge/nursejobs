@@ -32,7 +32,7 @@ export default function Mentorship() {
               />
             </div>
           </div>
-          <div className="absolute z-10 -bottom-52 -right-44 h-96 w-96 rounded-full bg-blue-800" />
+          <div className="absolute z-10 -bottom-52 -right-44 h-96 w-96 rounded-full bg-blue-800 animate-bounce animation-duration-[10s]" />
           <div className="absolute z-30 left-0 right-0 top-0 bottom-0 bg-black/10 backdrop-blur-sm" />
           <div className="absolute z-10 -left-28 sm:-left-20 top-0 sm:top-auto sm:h-96 h-64 sm:w-96 w-64 rounded-full bg-blue-800" />
           <div className="absolute z-20 -left-28 sm:-left-32 top-24 sm:top-10 sm:h-80 h-44 sm:w-80 w-44 rounded-full bg-blue-600/50" />
