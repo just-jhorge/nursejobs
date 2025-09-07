@@ -1,3 +1,5 @@
+import SignInForm from "./signin-form";
+
 export default function Page() {
-  return <div>Sign in page</div>;
+  return <SignInForm />;
 }

@@ -8,42 +8,36 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 import { Button } from "../ui/button";
-import { Menu, User, User2 } from "lucide-react";
-import NavbarClient from "./navbar-client";
+import { Menu, User2 } from "lucide-react";
 import Link from "next/link";
 import NavbarLinks from "./navbar-links";
+import UserDropdown from "./user-dropdown";
 
 export default function Navbar() {
   return (
-    <NavbarClient>
+    <nav className="sticky top-0 z-50 h-14 w-full backdrop-blur-md md:h-16">
       <div className="flex h-full items-center justify-center">
-        <div className="max-w-6xl px-4 lg:px-0 flex w-full items-center justify-between">
+        <div className="flex w-full max-w-6xl items-center justify-between px-4 lg:px-0">
           <MobileNavSheet />
           <Link href="/">NurseJobs</Link>
           <div className="hidden sm:block">
             <NavbarLinks />
           </div>
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="hidden items-center gap-2 sm:flex">
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full text-foreground"
+              className="text-foreground rounded-full"
             >
               <Link href="/signin">Get Hired</Link>
             </Button>
-            <Button
-              size="icon"
-              variant="outline"
-              className="rounded-full text-foreground"
-            >
-              <User />
-            </Button>
+            <UserDropdown />
           </div>
           <MobileAccountSheet />
         </div>
       </div>
-    </NavbarClient>
+    </nav>
   );
 }
 
@@ -53,7 +47,7 @@ function MobileNavSheet() {
       <Sheet>
         <SheetTrigger asChild>
           <Button size="icon" variant="outline">
-            <Menu className="size-5 text-foreground" />
+            <Menu className="text-foreground size-5" />
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="w-full">
@@ -80,7 +74,7 @@ function MobileAccountSheet() {
       <Sheet>
         <SheetTrigger asChild>
           <Button size="icon" variant="outline">
-            <User2 className="size-5 text-foreground" />
+            <User2 className="text-foreground size-5" />
           </Button>
         </SheetTrigger>
         <SheetContent side="right" className="w-full">

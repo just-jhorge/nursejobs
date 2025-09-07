@@ -71,8 +71,8 @@ export default function JobCard() {
       <CardHeader>
         <CardTitle>
           <div className="flex items-start justify-between">
-            <div className="size-14 border rounded-full overflow-hidden flex items-center justify-center">
-              <div className="size-10 bg-gray-100 rounded-full"></div>
+            <div className="flex size-14 items-center justify-center overflow-hidden rounded-full border">
+              <div className="size-10 rounded-full bg-gray-100"></div>
             </div>
             <Button
               size="sm"
@@ -86,11 +86,11 @@ export default function JobCard() {
       </CardHeader>
       <CardContent>
         <div className="space-y-2">
-          <div className="flex items-center text-sm gap-2">
-            <h4 className="font-semibold">Amazon</h4>
+          <div className="flex items-center gap-2 text-sm">
+            <h4>Amazon</h4>
             <p className="text-muted-foreground font-normal">3 days ago</p>
           </div>
-          <h3 className="font-bold text-lg md:text-xl line-clamp-1">
+          <h3 className="line-clamp-1 text-lg font-medium md:text-xl">
             Registered General Nurse
           </h3>
           <div className="inline-flex items-center gap-1">
@@ -102,17 +102,17 @@ export default function JobCard() {
       <CardFooter>
         <div className="w-full">
           <Separator />
-          <div className="pt-4 flex items-center justify-between">
+          <div className="flex items-center justify-between pt-4">
             <div>
-              <h4 className="text-sm font-bold">
-                GHS {`${formatNumber(1500)}-${formatNumber(3000)}`}
+              <h4 className="text-sm font-medium">
+                GHS {`${formatNumber(1500)} - ${formatNumber(3000)}`}
               </h4>
-              <p className="text-xs text-gray-400 font-medium">Dzorwulu, GA</p>
+              <p className="text-xs font-medium text-gray-400">Dzorwulu, GA</p>
             </div>
             <div className="flex items-center gap-1">
               <Button size="icon" variant="outline" asChild>
                 <Link href={`/jobs/job-slug`}>
-                  <Eye className="size-5" />
+                  <Eye className="size-4" />
                 </Link>
               </Button>
               <Button asChild>
